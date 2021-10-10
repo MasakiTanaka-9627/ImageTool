@@ -60,7 +60,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +68,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+            ],
+            'builtins':[
+                'bootstrap4.templatetags.bootstrap4',
             ],
         },
     },
@@ -147,3 +150,4 @@ STATICFILES_DIRS = (
 if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
+    ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
