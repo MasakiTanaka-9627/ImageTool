@@ -64,3 +64,21 @@ settings.py
 rewuirements.txt
  django-bootstrap4    
 
+2. OCRアプリの追加
+
+docker-compose run --rm web python manage.py startapp ocr
+INSTALLED_APPSに'ocr'を追加
+
+config.urls.pyの修正
+orc.urls.pyの修正
+orc.views.pyに
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the OCR index.")
+
+を追加。
+
+3. bootstrapを使ったテンプレーを表示させる
+
