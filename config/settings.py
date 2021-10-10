@@ -32,7 +32,7 @@ try:
 except ImportError:
     pass
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
 
 # Application definition
 
