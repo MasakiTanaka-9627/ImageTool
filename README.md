@@ -82,3 +82,5 @@ def index(request):
 
 3. bootstrapを使ったテンプレーを表示させる
 
+inex.htmlを修正
+
