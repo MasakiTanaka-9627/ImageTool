@@ -35,3 +35,6 @@ https://qiita.com/Kohey222/items/82f3a76e0247b2d387db
 
 https://teratail.com/questions/169838
 >django_heroku.settings(locals()) 周辺の行をもう少し下の方に移動されるとよいのではないかと思います。
+
+## app作成・django-bootstrap4の追加
+
