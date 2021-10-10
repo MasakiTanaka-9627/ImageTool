@@ -36,5 +36,31 @@ https://qiita.com/Kohey222/items/82f3a76e0247b2d387db
 https://teratail.com/questions/169838
 >django_heroku.settings(locals()) 周辺の行をもう少し下の方に移動されるとよいのではないかと思います。
 
+local_settings.pyとsettings.pyで環境を分ける
+
 ## app作成・django-bootstrap4の追加
+
+1. rewuirements.txtとsettings.pyにbootstrap4を追加
+
+settings.py
+ TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR, 'templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+            'builtins':[
+                'bootstrap4.templatetags.bootstrap4',
+            ],
+        },
+    },
+    
+rewuirements.txt
+ django-bootstrap4    
 
