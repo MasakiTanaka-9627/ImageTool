@@ -84,3 +84,6 @@ def index(request):
 
 inex.htmlを修正
 
+## Imageモデルの追加
+
+https://qiita.com/j54854/items/1f0560142e39d888251c
