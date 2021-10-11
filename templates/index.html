@@ -52,8 +52,10 @@
         <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
         <h2>{{ image.title }}</h2>
         {% endfor %}
-        <p>Back to <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/sticky-footer/">the default sticky
-                footer</a> minus the navbar.</p>
+
+        <h2><a href="{% url 'ocr:upload' %}">Upload more</a></h2>
+        
+    
     </div>
 </main>
 

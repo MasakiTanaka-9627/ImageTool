@@ -1,5 +1,6 @@
+from django.shortcuts import render, redirect
 from .models import Image
-from django.shortcuts import render
+from .forms import ImageForm
 
 
 def index(request):
@@ -7,3 +8,16 @@ def index(request):
     context = {'images': images}
 
     return render(request, 'index.html', context)
+
+
+def upload(request):
+    if request.method == "POST":
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('ocr:index')
+    else:
+        form = ImageForm()
+
+    context = {'form': form}
+    return render(request, 'upload.html', context)
