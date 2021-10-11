@@ -20,7 +20,7 @@ try:
 except ImportError:
     pass
 
-ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -59,6 +59,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
             'builtins':[
                 'bootstrap4.templatetags.bootstrap4',
