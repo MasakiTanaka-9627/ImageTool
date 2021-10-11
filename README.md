@@ -89,3 +89,22 @@ inex.htmlを修正
 https://qiita.com/j54854/items/1f0560142e39d888251c
 
 ## OCR機能追加
+
+1. 色々Installする
+
+requirements.txtに
+pyocr
+tesseract
+を追加
+
+2. Dockerfile
+
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
+    tesseract-ocr \
+    libtesseract-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+を追加

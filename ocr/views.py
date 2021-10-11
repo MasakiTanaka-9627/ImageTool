@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect
 from .models import Image
 from .forms import ImageForm
+from . import ocrtool
 
 
 def index(request):
+    text = ocrtool.function()
     images = Image.objects.all()
-    context = {'images': images}
+    context = {'images': images,
+                'text':  text}
 
     return render(request, 'index.html', context)
 
