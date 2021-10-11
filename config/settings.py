@@ -20,7 +20,7 @@ try:
 except ImportError:
     pass
 
-ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -137,6 +137,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Image用
+MEDIA_ROOT = BASE_DIR.joinpath('media')
+MEDIA_URL = '/media/'
 
 if not DEBUG:
     import django_heroku
