@@ -120,3 +120,11 @@ https://towardsdatascience.com/deploy-python-tesseract-ocr-on-heroku-bbcc39391a8
 TESSDATA_PREFIX ./.apt/usr/share/tesseract-ocr/4.00/tessdata
 
 https://github.com/heroku/heroku-buildpack-apt
+
+heroku-18にダウングレード
+エラー文：(127, b'tesseract: error while loading shared libraries: libarchive.so.13: cannot open shared object file: No such file or directory\n')
+https://stackoverflow.com/questions/66087588/tesseract-error-while-loading-shared-libraries-libarchive-so-13-python
+
+
+
+エラー文：(1, b'Error opening data file ./.apt/usr/share/tesseract-ocr/4.00/tessdata/jpn.traineddata\nPlease make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory.\nFailed loading language \'jpn\'\nTesseract couldn\'t load any languages!\nCould not initialize tesseract.\n')
