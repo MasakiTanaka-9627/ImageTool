@@ -132,4 +132,6 @@ https://stackoverflow.com/questions/66087588/tesseract-error-while-loading-share
 
 パーミッションがおかしい..
 
+./.apt/usr/share/tesseract-ocr/4.00/tessdata
+
 chmod a+r jpn.traineddata
