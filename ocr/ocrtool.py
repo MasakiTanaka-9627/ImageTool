@@ -7,6 +7,6 @@ def function():
     tool = tools[0]
     txt = tool.image_to_string(
         OCR_Image.open('media/images/test.png'),
-        lang='jpn',
+        lang='eng',
     )
     return txt
