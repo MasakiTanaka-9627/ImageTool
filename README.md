@@ -128,3 +128,8 @@ https://stackoverflow.com/questions/66087588/tesseract-error-while-loading-share
 
 
 エラー文：(1, b'Error opening data file ./.apt/usr/share/tesseract-ocr/4.00/tessdata/jpn.traineddata\nPlease make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory.\nFailed loading language \'jpn\'\nTesseract couldn\'t load any languages!\nCould not initialize tesseract.\n')
+
+
+パーミッションがおかしい..
+
+chmod a+r jpn.traineddata
