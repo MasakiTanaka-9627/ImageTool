@@ -108,3 +108,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 を追加
+
+## herokuでtesseract-ocr
+
+https://towardsdatascience.com/deploy-python-tesseract-ocr-on-heroku-bbcc39391a8d
