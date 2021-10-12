@@ -10,7 +10,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-    <title>Free Education</title>
+    <title>OCR TOOL</title>
 </head>
 
 <header>
@@ -49,8 +49,8 @@
             fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.
         </p>
         {% for image in images %}
-        <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
         <h2>{{ image.title }}</h2>
+        <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
         {% endfor %}
 
         <h2>OCRTOOL DEMO</h2>
