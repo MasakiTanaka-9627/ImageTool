@@ -3,11 +3,7 @@ import sys
 import pyocr
 import pytesseract
 
-def function():
-    TESSERACT_PATH = './.apt/usr/share/tesseract-ocr'
-    TESSDATA_PATH = './.apt/usr/share/tesseract-ocr/4.00/tessdata'
-
-    
+def function():    
     tools = pyocr.get_available_tools()
     tool = tools[0]
     txt = tool.image_to_string(
