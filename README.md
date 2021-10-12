@@ -111,4 +111,12 @@ RUN apt-get update \
 
 ## herokuでtesseract-ocr
 
+Aptfileを追加して、herokuでわちゃわちゃする。
+
 https://towardsdatascience.com/deploy-python-tesseract-ocr-on-heroku-bbcc39391a8d
+
+追加する。
+
+TESSDATA_PREFIX ./.apt/usr/share/tesseract-ocr/4.00/tessdata
+
+https://github.com/heroku/heroku-buildpack-apt
