@@ -141,3 +141,7 @@ heroku run bash
 chmod -R a+r .apt/
 
 TESSDATA_PREFIX = /app/.apt/usr/share/tesseract-ocr/4.00/tessdata
+
+herokuが起動できた
+
+英語でしかOCRできていない。正確性も分からない...

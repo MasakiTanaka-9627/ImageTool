@@ -21,6 +21,7 @@ except ImportError:
     pass
 
 ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
+# ALLOWED_HOSTS = []
 
 
 
