@@ -6,3 +6,5 @@ django-bootstrap4
 pillow
 pyocr
 tesseract
+tesseract-ocr
+tesseract-ocr-jpn
