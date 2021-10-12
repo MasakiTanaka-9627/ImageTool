@@ -139,3 +139,5 @@ chmod a+r jpn.traineddata
 コマンド
 heroku run bash 
 chmod -R a+r .apt/
+
+TESSDATA_PREFIX = /app/.apt/usr/share/tesseract-ocr/4.00/tessdata
