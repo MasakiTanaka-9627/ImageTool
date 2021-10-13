@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Image
+from .models import Image, ImageText
 from .forms import ImageForm
 from PIL import Image as OCR_Image
 import sys
@@ -7,13 +7,9 @@ import pyocr
 
 
 def index(request):
-    # text = ocrtool.function()
-    tools = pyocr.get_available_tools()
-    tool = tools[0]
-    text = tool.image_to_string(
-    OCR_Image.open('media/images/test.png'), lang='jpn')
     images = Image.objects.all()
-    context = {'images': images, 'text': text}
+    texts = ImageText.objects.all()
+    context = {'images': images, 'texts': texts}
     
     return render(request, 'index.html', context)
 
@@ -21,9 +17,10 @@ def index(request):
 def upload(request):
     if request.method == "POST":
         form = ImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('ocr:index')
+        form.save()
+
+        print(Image)
+        return redirect('ocr:index')
     else:
         form = ImageForm()
 

@@ -158,3 +158,10 @@ https://qiita.com/geeorgey/items/142146394a704e4ae7a4
 rqを使ってみる
 
 https://devcenter.heroku.com/ja/articles/python-rq
+
+orctool.pyを消去してviewで処理して解決
+
+## ファイル名問題
+
+任意のファイル名を付けるようにしたい。
+https://freeheroblog.com/filename-hash/
