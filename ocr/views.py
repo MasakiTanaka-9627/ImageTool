@@ -9,7 +9,7 @@ def index(request):
     images = Image.objects.all()
     context = {'images': images,
                 'text':  text}
-
+    
     return render(request, 'index.html', context)
 
 

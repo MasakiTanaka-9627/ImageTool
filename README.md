@@ -144,4 +144,8 @@ TESSDATA_PREFIX = /app/.apt/usr/share/tesseract-ocr/4.00/tessdata
 
 herokuが起動できた
 
-英語でしかOCRできていない。正確性も分からない...
+engならOK、jpnにすると落ちる
+
+localでjpnにしても、起動して正確にOCRできている。
+
+→herokuでも日本語でOCRできた。
