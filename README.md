@@ -149,3 +149,12 @@ engならOK、jpnにすると落ちる
 localでjpnにしても、起動して正確にOCRできている。
 
 →herokuでも日本語でOCRできた。
+
+## タイムアウト問題
+
+https://qiita.com/geeorgey/items/142146394a704e4ae7a4
+
+
+rqを使ってみる
+
+https://devcenter.heroku.com/ja/articles/python-rq
