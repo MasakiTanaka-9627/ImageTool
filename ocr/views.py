@@ -5,12 +5,10 @@ from . import ocrtool
 
 
 def index(request):
-    # text = ocrtool.function()
+    text = ocrtool.function()
     images = Image.objects.all()
-    # context = {'images': images,
-    #            'text':  text}
-
-    context = {'images': images}
+    context = {'images': images,
+                'text':  text}
     
     return render(request, 'index.html', context)
 
