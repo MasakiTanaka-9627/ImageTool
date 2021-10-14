@@ -40,8 +40,25 @@
 <main role="main" class="flex-shrink-0">
     <div class="container padding-top: 60px">
         <h1 class="mt-5">OCRTOOL DEMO</h1>
-        <p>{{ text }}</p>
-        <h2><a href="{% url 'ocr:upload' %}">Upload more</a></h2>
+        <div class="container">
+            {% for image in images %}
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Title：{{ image.title }}</h2>
+                    <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
+                    <p>{{image.picture}}</p>
+                </div>
+                <div class="col-sm-6">
+                    <p>文字起こしテキスト</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+
+        <a href="{% url 'ocr:upload' %}" type="button" class="btn btn-outline-primary">Upload more</a>
     </div>
 </main>
 

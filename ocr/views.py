@@ -18,8 +18,16 @@ def upload(request):
     if request.method == "POST":
         form = ImageForm(request.POST, request.FILES)
         form.save()
-
-        print(Image)
+        images = Image.objects.all()
+        entries = Image.objects.all().order_by("-id")[0]
+        print(entries.picture)
+        tools = pyocr.get_available_tools()
+        tool = tools[0]
+        txt = tool.image_to_string(
+        OCR_Image.open(entries.picture),
+        lang='jpn',
+        )
+        ImageText.objects.create(title=entries, text=txt)
         return redirect('ocr:index')
     else:
         form = ImageForm()

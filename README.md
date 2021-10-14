@@ -163,5 +163,5 @@ orctool.pyを消去してviewで処理して解決
 
 ## ファイル名問題
 
-任意のファイル名を付けるようにしたい。
+任意のファイル名を付けて保存できるようにしたい。
 https://freeheroblog.com/filename-hash/
