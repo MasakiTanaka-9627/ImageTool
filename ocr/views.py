@@ -7,8 +7,8 @@ import pyocr
 
 
 def index(request):
-    images = Image.objects.all()
-    texts = ImageText.objects.all()
+    images = Image.objects.all().order_by("-id")[0]
+    texts = ImageText.objects.all().order_by("-id")[0]
     context = {'images': images, 'texts': texts}
     
     return render(request, 'index.html', context)

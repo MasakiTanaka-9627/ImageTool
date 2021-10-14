@@ -41,18 +41,15 @@
     <div class="container padding-top: 60px">
         <h1 class="mt-5">OCRTOOL DEMO</h1>
         <div class="container">
-            {% for image in images %}
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Title：{{ image.title }}</h2>
-                    <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
-                    <p>{{image.picture}}</p>
+                    <h2>Title：{{ images.title }}</h2>
+                    <img src='{{ MEDIA_URL }}{{images.picture}}' width=200>                
                 </div>
                 <div class="col-sm-6">
-                    <p>文字起こしテキスト</p>
+                    <p>{{ texts }}}</p>
                 </div>
             </div>
-            {% endfor %}
         </div>
 
 
