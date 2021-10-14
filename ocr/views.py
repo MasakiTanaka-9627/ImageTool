@@ -8,7 +8,10 @@ import pyocr
 
 def index(request):
     images = Image.objects.all().order_by("-id")[0]
-    texts = ImageText.objects.all().order_by("-id")[0]
+    try:
+        texts = ImageText.objects.all().order_by("-id")[0]
+    except:
+        texts = "エラー"
     context = {'images': images, 'texts': texts}
     
     return render(request, 'index.html', context)
