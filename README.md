@@ -183,3 +183,11 @@ def upload(request):
         )
         ImageText.objects.create(title=entries, text=txt)
         return redirect('ocr:index')
+
+## コピペボタンの作成
+
+<!-- https://mo22comi.com/2021/01/10/bootstrap-copy-and-tooltip/ -->
+
+https://webdesign-programming.com/javascript-textarea-copy
+
+## アップロード画面を同じ画面にする
