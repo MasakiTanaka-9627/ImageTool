@@ -195,3 +195,8 @@ https://webdesign-programming.com/javascript-textarea-copy
 ## debug=Falseとした場合でもDjangoに静的ファイルを参照させる
 
 https://qiita.com/kimisyo/items/0a67f129904a427cf92d
+
+
+> python manage.py collectstatic --noinputを試してみる
+
+https://stackoverflow.com/questions/66717895/how-to-solve-filenotfounderror-errno-2-no-such-file-or-directory-code-sta

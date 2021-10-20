@@ -15,13 +15,12 @@ SECRET_KEY = 'django-insecure-56qa0*pn)xyfyppgt9$hw1qx+s68$83_mjhxk!(e_hbfm7lkil
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-try:
-    from local_settings.py import *
-except ImportError:
-    pass
+# try:
+#     from local_settings.py import *
+# except ImportError:
+#     pass
 
 # ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
-# ALLOWED_HOSTS = ['0.0.0.0:8000']
 ALLOWED_HOSTS = ['*']
 
 
@@ -87,9 +86,6 @@ DATABASES = {
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -108,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -122,24 +117,23 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # 追記
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
-# 追記
-STATICFILES_DIRS = (
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# # 追記
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-)
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Image用
 MEDIA_ROOT = BASE_DIR.joinpath('media')
