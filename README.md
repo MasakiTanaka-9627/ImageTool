@@ -191,3 +191,7 @@ def upload(request):
 https://webdesign-programming.com/javascript-textarea-copy
 
 ## アップロード画面を同じ画面にする
+
+## debug=Falseとした場合でもDjangoに静的ファイルを参照させる
+
+https://qiita.com/kimisyo/items/0a67f129904a427cf92d

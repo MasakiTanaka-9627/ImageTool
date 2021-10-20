@@ -20,9 +20,9 @@ try:
 except ImportError:
     pass
 
-ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
-# ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
+# ALLOWED_HOSTS = ['0.0.0.0:8000']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -148,4 +148,4 @@ MEDIA_URL = '/media/'
 if not DEBUG:
     import django_heroku
     django_heroku.settings(locals())
-    ALLOWED_HOSTS = ["tool20211011.herokuapp.com"]
+    ALLOWED_HOSTS = ['*']
