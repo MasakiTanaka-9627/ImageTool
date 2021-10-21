@@ -20,7 +20,10 @@ def index(request):
     else:
         form = ImageForm()
 
-    images = Image.objects.all().order_by("-id")[0]
+    try:
+        images = Image.objects.all().order_by("-id")[0]
+    except:
+        images = None
 
     try:
         texts = ImageText.objects.all().order_by("-id")[0]

@@ -16,7 +16,6 @@ class Image(models.Model):
     picture = models.ImageField(
         upload_to=_user_profile_avator_upload_to
         )
-    title = models.CharField(max_length=200)
     def __str__(self):
         return self.title
 
