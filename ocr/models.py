@@ -12,17 +12,13 @@ def _user_profile_avator_upload_to(instance, filename):
     saved_path = 'images/'
     return '%s%s' % (saved_path, hs_filename)
 
-
 class Image(models.Model):
     picture = models.ImageField(
-        # upload_to='images/'
         upload_to=_user_profile_avator_upload_to
         )
-
     title = models.CharField(max_length=200)
     def __str__(self):
         return self.title
-
 
 class ImageText(models.Model):
     text = models.TextField()
